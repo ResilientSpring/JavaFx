@@ -44,3 +44,21 @@ public class Skeleton extends Application {
 	}	
 
 }
+
+/* Run JavaFX in Eclipse
+ * 
+ * 
+ * Create a new User Library under Eclipse -> Window -> Preferences -> Java -> Build Path -> User Libraries -> New.[3]
+ * 
+ * Name it JavaFX17 and include the jars under the lib folder from JavaFX 17.[3]
+ * 
+ * Make sure JDK 11 or greater is selected. You don't need to add a module-info.java file. You can include the JavaFX17 library into the classpath.[3]
+ * 
+ * Add VM arguments.[1][2][3]
+ * 
+ * */
+
+// References: 
+// 1. https://stackoverflow.com/a/52470141/14900011
+// 2. https://stackoverflow.com/a/52156678/14900011
+// 3. https://openjfx.io/openjfx-docs/
