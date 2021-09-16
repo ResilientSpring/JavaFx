@@ -61,3 +61,4 @@ public class Skeleton extends Application {
 // References: 
 // 1. https://stackoverflow.com/a/52470141/14900011
 // 2. https://stackoverflow.com/a/52156678/14900011
+// 3. https://openjfx.io/openjfx-docs/
