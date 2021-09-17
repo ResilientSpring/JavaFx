@@ -30,6 +30,12 @@ public class Click_me extends Application {
 		
 		// Add the layout to the scene.
 		Scene scene = new Scene(pane, 300, 200);
+		
+		// Set the scene on the stage.
+		primaryStage.setScene(scene);
+		
+		// Show the stage and its scene
+		primaryStage.show();
 
 	}
 
