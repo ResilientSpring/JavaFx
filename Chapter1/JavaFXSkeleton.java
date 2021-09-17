@@ -17,6 +17,7 @@ public class JavaFXSkeleton extends Application {
 		System.out.println("Inside the initialization method.");
 	}
 	
+	// The primary stage is supplied by the run-time system when a JavaFX application is started.
 	public void start(Stage myStage) {
 		
 	}
