@@ -26,7 +26,9 @@ public class JavaFXSkeleton extends Application { // A JavaFX application must b
 		// Give the stage a title.
 		myStage.setTitle("JavaFX Skeleton");
 		
-		// To create a scene, you will first prepare elements, i.e nodes, to add to an instance of Scene.
+		// To create a scene, you will first prepare elements, i.e nodes/items, to add to an instance of Scene.
+		// JavaFX offers several layout panes that manage how elements/nodes/items are placed in a scene.
+		FlowPane rootNode = new FlowPane();
 		
 		// A stage defines a space and a scene defines what goes in that space. 
 		Scene myScene = new Scene(null);
