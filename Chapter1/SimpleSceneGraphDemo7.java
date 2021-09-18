@@ -1,6 +1,7 @@
 import javafx.application.*;
 import javafx.stage.*;
 import javafx.scene.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 
@@ -13,6 +14,8 @@ public class SimpleSceneGraphDemo7 extends Application {
 	public void init() {
 		
 	}
+	
+	Button button;
 	
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Simple Scene Graph Demo");
