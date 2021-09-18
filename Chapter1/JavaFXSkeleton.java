@@ -31,10 +31,13 @@ public class JavaFXSkeleton extends Application { // A JavaFX application must b
 		FlowPane rootNode = new FlowPane();
 		
 		// A stage defines a space and a scene defines what goes in that space. 
-		Scene myScene = new Scene(null);
+		Scene myScene = new Scene(rootNode);
 		
 		// Set the scene on the stage.
 		myStage.setScene(myScene);
+		
+		// show() shows the window that was created by the stage and scene. 
+		myStage.show();
 	}
 	
 	public void stop() {
