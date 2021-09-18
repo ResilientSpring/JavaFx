@@ -16,30 +16,31 @@ public class SimpleSceneGraphDemo7 extends Application {
 	}
 	
 	Button button;
+	FlowPane pane = new FlowPane();
+	
+	Label label = new Label("I am a label.");
+	Label label2 = new Label("I am another label.");
 	
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("Simple Scene Graph Demo");
 		
-		FlowPane pane = new FlowPane();
+		button = new Button("Erase the right-most label.");
+		button.setOnAction(event -> buttonClick());
 		
-		Label label = new Label("I am a label.");
-		Label label2 = new Label("I am another label.");
-		
-		pane.getChildren().addAll(label, label2);
+		pane.getChildren().addAll(label, label2, button);
 		
 		Scene scene = new Scene(pane, 300, 200);
 		
 		primaryStage.setScene(scene);
 		
-		button = new Button("Erase the right-most label.");
-		button.setOnAction(event -> buttonClick());
-		
 		primaryStage.show();
 	}
 	
-	private Object buttonClick() {
-		// TODO Auto-generated method stub
-		return null;
+	public void buttonClick() {
+		if(button.getText() == "Erase the right-most label.")
+			pane.getChildren().remove(label2);
+		else 
+			button.setText("Erase the right-most label.");
 	}
 
 	public void stop() {
