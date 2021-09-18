@@ -30,6 +30,16 @@ public class SimpleSceneGraphDemo extends Application {
 		
 		// Create a label.
 		Label label = new Label("A simple JavaFX label.");
+		
+		// Add the label to the scene graph.
+		rootNode.getChildren().add(label);  // In other words, it adds the label to rootNode's list of children.
+		
+		// Show the window that was created by the stage and scene.
+		primaryStage.show();
+	}
+	
+	public void stop() {
+		
 	}
 
 }
