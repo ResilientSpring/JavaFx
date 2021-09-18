@@ -31,9 +31,17 @@ public class SimpleSceneGraphDemo7 extends Application {
 		
 		primaryStage.setScene(scene);
 		
+		button = new Button("Erase the right-most label.");
+		button.setOnAction(event -> buttonClick());
+		
 		primaryStage.show();
 	}
 	
+	private Object buttonClick() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void stop() {
 		
 	}
