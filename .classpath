@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="Chapter1"/>
 	<classpathentry kind="src" path="JavaFx_for_dummies"/>
 	<classpathentry kind="src" path="JavaFX_Essentials"/>
+	<classpathentry kind="src" path="Chapter2"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
 		<attributes>
 			<attribute name="module" value="true"/>
