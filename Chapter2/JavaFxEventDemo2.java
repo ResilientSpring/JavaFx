@@ -21,16 +21,6 @@ public class JavaFxEventDemo2 extends Application {
 		
 		primaryStage.setTitle("Introducing Buttons and Events");
 		
-		// Use a FlowPane for the root node. In this case, vertical and horizontal gaps of 10.
-		FlowPane rootNoteFlowPane = new FlowPane(10, 10);
-		
-		// Center the controls in the scene.
-		rootNoteFlowPane.setAlignment(Pos.CENTER);
-		
-		Scene myScene = new Scene(rootNoteFlowPane, 300, 100);
-		
-		primaryStage.setScene(myScene);
-		
 		// Create two push buttons. 
 		Button firstButton = new Button("First");
 		Button secondButton = new Button("Second");
@@ -44,6 +34,17 @@ public class JavaFxEventDemo2 extends Application {
 				responseLabel.setText("First button was pressed.");
 			}
 		});
+		
+		
+		// Use a FlowPane for the root node. In this case, vertical and horizontal gaps of 10.
+		FlowPane rootNoteFlowPane = new FlowPane(10, 10);
+		
+		// Center the controls in the scene.
+		rootNoteFlowPane.setAlignment(Pos.CENTER);
+		
+		Scene myScene = new Scene(rootNoteFlowPane, 300, 100);
+		
+		primaryStage.setScene(myScene);
 		
 	}
 
