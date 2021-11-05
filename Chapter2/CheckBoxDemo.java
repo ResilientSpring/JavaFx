@@ -24,6 +24,8 @@ public class CheckBoxDemo extends Application {
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
 		
+		arg0.setTitle("Demonstrate Check Boxes");
+		
 	}
 
 }
