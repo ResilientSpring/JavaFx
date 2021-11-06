@@ -1,6 +1,8 @@
 import javafx.application.Application;
+import javafx.geometry.Orientation;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 // Demonstrate check boxes.
@@ -27,6 +29,8 @@ public class Check_boxes extends Application {
 		// TODO Auto-generated method stub
 		
 		arg0.setTitle("Demonstrating Check Boxes");
+		
+		FlowPane rootNodeFlowPane = new FlowPane(Orientation.VERTICAL, 0, 10);
 		
 	}
 
