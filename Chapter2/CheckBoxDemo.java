@@ -1,6 +1,8 @@
 import javafx.application.Application;
+import javafx.geometry.Orientation;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 public class CheckBoxDemo extends Application {
@@ -21,10 +23,13 @@ public class CheckBoxDemo extends Application {
 	}
 
 	@Override
-	public void start(Stage arg0) throws Exception {
+	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		
-		arg0.setTitle("Demonstrate Check Boxes");
+		primaryStage.setTitle("Demonstrate Check Boxes");
+		
+		// Vertical gap of 10.
+		FlowPane pane = new FlowPane(Orientation.VERTICAL, 0, 10);
 		
 	}
 
