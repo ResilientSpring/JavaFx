@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
-public class CheckBoxDemo extends Application {
+public class CheckBoxDemo_ extends Application {
 	
 	CheckBox keyboardCheckBox;
 	CheckBox mouseCheckBox;
@@ -25,28 +25,12 @@ public class CheckBoxDemo extends Application {
 		// TODO Auto-generated method stub
 		
 		launch(args);
+
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
-		
-		primaryStage.setTitle("Demonstrate Check Boxes");
-		
-		// Vertical gap of 10.
-		FlowPane pane = new FlowPane(Orientation.VERTICAL, 0, 10);
-		
-		// Center the controls vertically; left-align them horizontally.
-		pane.setAlignment(Pos.CENTER_LEFT);
-		
-		// Set a padding value of 10 on the left for the flow pane.
-		pane.setPadding(new Insets(0, 0, 0, 10));
-		
-		// Create a scene. 
-		Scene scene = new Scene(pane, 300, 180);
-		
-		// Set the scene on the stage. 
-		primaryStage.setScene(scene);
 		
 		Label headingLabel = new Label("Select Input Devices.");
 		
@@ -103,10 +87,23 @@ public class CheckBoxDemo extends Application {
 			}
 		});
 		
+		// Vertical gap of 10.
+		FlowPane pane = new FlowPane(Orientation.VERTICAL, 0, 10);
+		
+		// Center the controls vertically; left-align them horizontally.
+		pane.setAlignment(Pos.CENTER_LEFT);
+		
+		// Set a padding value of 10 on the left for the flow pane.
+		pane.setPadding(new Insets(0, 0, 0, 10));
+		
 		pane.getChildren().addAll(headingLabel, keyboardCheckBox, mouseCheckBox, touchScreenCheckBox, responseLabel, selectedLabel);
 		
-		primaryStage.show();
+		// Create a scene. 
+		Scene scene = new Scene(pane, 300, 180);
 		
+		primaryStage.setTitle("Demonstrate Check Boxes");
+		
+		primaryStage.show();
 	}
 
 }
