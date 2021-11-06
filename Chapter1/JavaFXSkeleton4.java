@@ -1,17 +1,13 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 
-import javafx.application.*;
-import javafx.stage.*;
-import javafx.scene.*;
-import javafx.scene.layout.*;
-
-public class JavaFXSkeleton2 extends Application { // A JavaFX application must be a subclass of the Application class.
+public class JavaFXSkeleton4 extends Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Launching JavaFx Application.");
-		
-		// Here, args is a possibly empty list of strings that typically specifies command-line arguments.
 		launch(args);
 
 	}
@@ -33,17 +29,13 @@ public class JavaFXSkeleton2 extends Application { // A JavaFX application must 
 		FlowPane pane = new FlowPane();
 		
 		// A stage defines a space and a scene defines what goes in that space. 
-		Scene scene = new Scene(pane);
+		Scene scene = new Scene(pane, 300, 200);
 		
 		// Set the scene on the stage.
 		primaryStage.setScene(scene);
 		
 		// show() shows the window that was created by the stage and scene. 
 		primaryStage.show();
-		
-	}
-	
-	public void stop() {
 		
 	}
 
