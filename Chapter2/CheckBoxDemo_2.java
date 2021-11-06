@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
-public class CheckBoxDemo extends Application {
+public class CheckBoxDemo_2 extends Application {
 	
 	CheckBox keyboardCheckBox;
 	CheckBox mouseCheckBox;
@@ -20,33 +20,16 @@ public class CheckBoxDemo extends Application {
 	Label selectedLabel;
 	
 	String inputDeviceString = "";
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		launch(args);
+
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// TODO Auto-generated method stub
-		
-		primaryStage.setTitle("Demonstrate Check Boxes");
-		
-		// Vertical gap of 10.
-		FlowPane pane = new FlowPane(Orientation.VERTICAL, 0, 10);
-		
-		// Center the controls vertically; left-align them horizontally.
-		pane.setAlignment(Pos.CENTER_LEFT);
-		
-		// Set a padding value of 10 on the left for the flow pane.
-		pane.setPadding(new Insets(0, 0, 0, 10));
-		
-		// Create a scene. 
-		Scene scene = new Scene(pane, 300, 180);
-		
-		// Set the scene on the stage. 
-		primaryStage.setScene(scene);
 		
 		Label headingLabel = new Label("Select Input Devices.");
 		
@@ -75,6 +58,7 @@ public class CheckBoxDemo extends Application {
 					responseLabel.setText("Keyboard cleared.");
 				}
 				
+				showAll();
 			}
 		});
 		
@@ -89,6 +73,8 @@ public class CheckBoxDemo extends Application {
 				} else {
 					responseLabel.setText("Mouse cleared.");
 				}
+				
+				showAll();
 			}
 		});
 		
@@ -103,13 +89,51 @@ public class CheckBoxDemo extends Application {
 				} else {
 					responseLabel.setText("Touch Screen cleared.");
 				}
+				
+				showAll();
 			}
 		});
 		
+		// Vertical gap of 10.
+		FlowPane pane = new FlowPane(Orientation.VERTICAL, 0, 10);
+		
+		// Center the controls vertically; left-align them horizontally.
+		pane.setAlignment(Pos.CENTER_LEFT);
+		
+		// Set a padding value of 10 on the left for the flow pane.
+		pane.setPadding(new Insets(0, 0, 0, 10));
+		
 		pane.getChildren().addAll(headingLabel, keyboardCheckBox, mouseCheckBox, touchScreenCheckBox, responseLabel, selectedLabel);
+		
+		// Create a scene. 
+		Scene scene = new Scene(pane, 300, 180);
+		
+		primaryStage.setTitle("Demonstrate Check Boxes");
 		
 		primaryStage.show();
 		
+	}
+	
+	// Update and show the input devices list.
+	void showAll() {
+		// Use isSelected() to determine the state of the check boxes. 
+		if (keyboardCheckBox.isSelected()) {
+			inputDeviceString = "keyboard ";
+		}
+		
+		if (mouseCheckBox.isSelected()) {
+			inputDeviceString = inputDeviceString + "Mouse ";
+		}
+		
+		if (touchScreenCheckBox.isSelected()) {
+			inputDeviceString += "Touch Screen";
+		}
+		
+		if (inputDeviceString.equals("")) {
+			inputDeviceString = "<none>";
+		}
+		
+		selectedLabel.setText("Supported devices: " + inputDeviceString);
 	}
 
 }

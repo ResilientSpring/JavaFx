@@ -46,7 +46,10 @@ public class CheckBoxDemo2 extends Application {
 		headingLabel = new Label("Select input devices ");
 		
 		// Create a label that will report the state of the selected check box.
-		responseLabel = new Label("Supported devices: <none>");
+		responseLabel = new Label("No Devices Selected.");
+		
+		// Create a label that will report all input devices selected. 
+		selectedLabel = new Label("Supported devices: <none>");
 		
 		// Create check boxes
 		keyboardCheckBox = new CheckBox("Keyboard");
