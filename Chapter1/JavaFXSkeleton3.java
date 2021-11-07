@@ -1,17 +1,13 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 
-import javafx.application.*;
-import javafx.stage.*;
-import javafx.scene.*;
-import javafx.scene.layout.*;
-
-public class JavaFXSkeleton2 extends Application { // A JavaFX application must be a subclass of the Application class.
+public class JavaFXSkeleton3 extends Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Launching JavaFx Application.");
-		
-		// Here, args is a possibly empty list of strings that typically specifies command-line arguments.
 		launch(args);
 
 	}
@@ -30,7 +26,7 @@ public class JavaFXSkeleton2 extends Application { // A JavaFX application must 
 		
 		// To create a scene, you will first prepare elements, i.e nodes/items, to add to an instance of Scene.
 		// JavaFX offers several layout panes that manage how elements/nodes/items are placed in a scene.
-		FlowPane pane = new FlowPane();
+		FlowPane pane = new FlowPane(300, 200);
 		
 		// A stage defines a space and a scene defines what goes in that space. 
 		Scene scene = new Scene(pane);
@@ -40,10 +36,6 @@ public class JavaFXSkeleton2 extends Application { // A JavaFX application must 
 		
 		// show() shows the window that was created by the stage and scene. 
 		primaryStage.show();
-		
-	}
-	
-	public void stop() {
 		
 	}
 
