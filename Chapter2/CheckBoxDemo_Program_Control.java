@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -75,6 +76,8 @@ public class CheckBoxDemo_Program_Control extends Application {
 		});
 
 		FlowPane pane = new FlowPane(Orientation.VERTICAL, 0, 10);
+		
+		pane.setPadding(new Insets(0, 0, 0, 10));
 		
 		pane.getChildren().addAll(headingLabel, keyboardCheckBox, mouseCheckBox, touchScreenCheckBox, responseLabel,
 				selectedLabel);
