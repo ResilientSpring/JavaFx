@@ -1,9 +1,13 @@
 import javafx.application.Application;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class CheckBoxDemo_Program_Control extends Application {
+	
+	Button selectAllButton = new Button("Select All");
+	Button resetButton = new Button("Reset");
 	
 	CheckBox keyboardCheckBox = new CheckBox("Keyboard");
 	CheckBox mouseCheckBox = new CheckBox("Mouse");
