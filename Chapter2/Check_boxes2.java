@@ -39,7 +39,7 @@ public class Check_boxes2 extends Application {
 					responseLabel.setText("Keyboard selected");
 				}
 				
-				if (keyboardCheckBox.isAllowIndeterminate() == false) {
+				if (keyboardCheckBox.isSelected() == false) {
 					responseLabel.setText("Keyboard is cleared.");
 				}
 				
