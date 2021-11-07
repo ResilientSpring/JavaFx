@@ -44,6 +44,8 @@ public class CheckBoxDemo_Program_Control extends Application {
 				} else {
 					responseLabel.setText("Keyboard is cleared.");
 				}
+				
+				showAll();
 			}
 		});
 
@@ -57,6 +59,8 @@ public class CheckBoxDemo_Program_Control extends Application {
 				} else {
 					responseLabel.setText("Mouse is cleared.");
 				}
+				
+				showAll();
 			}
 		});
 
@@ -72,6 +76,8 @@ public class CheckBoxDemo_Program_Control extends Application {
 				} else {
 					responseLabel.setText("Touch Screen is cleared.");
 				}
+				
+				showAll();
 			}
 		});
 
@@ -89,6 +95,26 @@ public class CheckBoxDemo_Program_Control extends Application {
 		primaryStage.setTitle("Demonstration of Program-controlled Check Box");
 		
 		primaryStage.show();
+	}
+	
+	void showAll() {
+		if (keyboardCheckBox.isSelected()) {
+			inputDeviceString = "Keyboard";
+		}
+		
+		if (mouseCheckBox.isSelected()) {
+			inputDeviceString += "Mouse";
+		}
+		
+		if (touchScreenCheckBox.isSelected()) {
+			inputDeviceString += "Touch Screen";
+		}
+		
+		if (inputDeviceString.equals("")) {
+			inputDeviceString = "<none>";
+		}
+		
+		selectedLabel.setText("Supported devices" + inputDeviceString); 
 	}
 
 }
