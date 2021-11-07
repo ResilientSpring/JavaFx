@@ -1,7 +1,9 @@
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
@@ -10,12 +12,13 @@ import javafx.stage.Stage;
 // Demonstrate check boxes.
 public class Check_boxes extends Application {
 	
-	CheckBox checkBox_keyboard;
-	CheckBox checkBox_Mouse;
-	CheckBox checkBox_Touch;
+	CheckBox checkBox_keyboard = new CheckBox("Keyboard");
+	CheckBox checkBox_Mouse = new CheckBox("Mouse");
+	CheckBox checkBox_Touch = new CheckBox("Touch Screen");
 	
-	Label responseLabel;
-	Label selectedLabel;
+	Label headingLabel = new Label("Select Input Devices");
+	Label responseLabel = new Label("No Devices Selected.");
+	Label selectedLabel = new Label("Supported devices: <none>");
 	
 	String inputDeviceString = "";
 
@@ -76,6 +79,15 @@ public class Check_boxes extends Application {
 		
 		FlowPane rootNodeFlowPane = new FlowPane(Orientation.VERTICAL, 0, 10);
 		
+		rootNodeFlowPane.setPadding(new Insets(0, 0, 0, 10));
+		
+		rootNodeFlowPane.getChildren().addAll(headingLabel, checkBox_keyboard, checkBox_Mouse, checkBox_Touch, responseLabel, selectedLabel);
+		
+		Scene scene = new Scene(rootNodeFlowPane, 300, 180);
+		
+		arg0.setScene(scene);
+		
+		arg0.show();
 	}
 
 }
