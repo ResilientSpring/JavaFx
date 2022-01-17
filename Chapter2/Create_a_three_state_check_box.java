@@ -27,7 +27,12 @@ public class Create_a_three_state_check_box extends Application {
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
+		keyboardCheckBox.setOnAction(null);
+		mouseCheckBox.setOnAction(null);
+		touchScreenCheckBox.setOnAction(null);
 		
+		selectAllButton.setOnAction(null);
+		resetButton.setOnAction(null);
 	}
 
 }
